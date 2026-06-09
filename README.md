@@ -87,7 +87,7 @@ Many individuals struggle to keep track of their daily expenses using traditiona
 
 ---
 
-## Use Case Diagram (User Activities)
+## Use Case Diagram preparation
 * Register Account
 * Login
 * Add Expense
@@ -107,26 +107,106 @@ Many individuals struggle to keep track of their daily expenses using traditiona
 * **Development Tools:** Visual Studio Code (VS Code), GitHub, Google Chrome
 
 ---
+### Use case Diagram Preparation
+Actors
+
+• User
+
+Use Cases
+
+• Register
+
+• Login
+
+• Add Expense
+
+• Edit Expense
+
+• Delete Expense
+
+• View Expenses
+
+• Manage Categories
+
+• Generate Reports
+
+• Logout
+
+---
+
+### Database Requirement Analysis
+
+The system requires storage of the following information:
+
+User Information
+
+• User ID
+
+• Name
+
+• Email
+
+• Password
+
+Expense Information
+
+• Expense ID
+
+• Category
+
+• Amount
+
+• Description
+
+• Date
+
+Category Information
+
+• Category ID
+
+• Category Name
+
+---
+
+Relationship
+
+• One User can have many Expenses.
+
+• One Category can contain many Expenses.
+
+• Each Expense belongs to one User and one Category.
+
+---
 
 ## Database Schema Creation
 
 ### 1. User Table
-* `user_id` (INT) - Primary Key
-* `name` (VARCHAR(50))
-* `email` (VARCHAR(100))
-* `password` (VARCHAR(50))
 
-### 2. Category Table
-* `category_id` (INT) - Primary Key
-* `category_name` (VARCHAR(50))
+| Field Name | Data Type    |
+| ---------- | ------------ |
+| user_id    | INT          |
+| name       | VARCHAR(50)  |
+| email      | VARCHAR(100) |
+| password   | VARCHAR(50)  |
+
+### 2.Category Table
+
+| Field Name    | Data Type   |
+| ------------- | ----------- |
+| category_id   | INT         |
+| category_name | VARCHAR(50) |
+
 
 ### 3. Expense Table
-* `expense_id` (INT) - Primary Key
-* `user_id` (INT) - Foreign Key
-* `category_id` (INT) - Foreign Key
-* `amount` (DECIMAL(10,2))
-* `description` (VARCHAR(255))
-* `expense_date` (DATE)
+
+| Field Name   | Data Type     |
+| ------------ | ------------- |
+| expense_id   | INT           |
+| user_id      | INT           |
+| category_id  | INT           |
+| amount       | DECIMAL(10,2) |
+| description  | VARCHAR(255)  |
+| expense_date | DATE          |
 
 ---
 
@@ -147,8 +227,6 @@ Many individuals struggle to keep track of their daily expenses using traditiona
 
 ## Expected Outcome
 The Personal Expense Tracker System will help users maintain accurate financial records, monitor expenses, analyze spending patterns, and improve budgeting through a simple and effective web application.
-
----
 
 ---
 
